@@ -1,19 +1,19 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Golden Hour Groove,Velvet Lane,r&b,romantic,0.55,92,0.78,0.72,0.42
-12,Street Cypher,Block Theory,hip-hop,energetic,0.85,140,0.63,0.91,0.08
-13,Nocturne in Blue,Clara Voss,classical,peaceful,0.22,56,0.60,0.28,0.96
-14,Dusty Backroads,The Elm Creek Band,country,melancholic,0.44,88,0.41,0.55,0.82
-15,Shattered Glass,Iron Veil,metal,angry,0.97,168,0.27,0.52,0.04
-16,Wildflower Ballad,June Hollow,folk,sad,0.29,68,0.37,0.38,0.93
-17,Drop Zone,Pulse Syndicate,edm,euphoric,0.96,128,0.86,0.97,0.02
-18,Mississippi Burn,Low Delta,blues,melancholic,0.38,74,0.34,0.47,0.77
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,popularity,release_decade,mood_tags,instrumentalness,liveness
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,78,2020,"euphoric,sunny,uplifting",0.02,0.12
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,65,2020,"focused,dreamy,calm",0.85,0.05
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,55,2010,"aggressive,driving,powerful",0.04,0.28
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,72,2020,"peaceful,gentle,focused",0.92,0.04
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,85,2020,"motivational,energetic,triumphant",0.01,0.08
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,48,2020,"dreamy,ethereal,contemplative",0.95,0.06
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,61,2010,"nostalgic,warm,cozy",0.45,0.32
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,58,2020,"cinematic,moody,nostalgic",0.78,0.05
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,69,2020,"focused,calm,productive",0.88,0.03
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,74,2020,"hopeful,bittersweet,uplifting",0.03,0.15
+11,Golden Hour Groove,Velvet Lane,r&b,romantic,0.55,92,0.78,0.72,0.42,82,2020,"romantic,smooth,warm",0.08,0.14
+12,Street Cypher,Block Theory,hip-hop,energetic,0.85,140,0.63,0.91,0.08,76,2020,"confident,raw,aggressive",0.02,0.18
+13,Nocturne in Blue,Clara Voss,classical,peaceful,0.22,56,0.60,0.28,0.96,45,2000,"contemplative,serene,wistful",1.00,0.09
+14,Dusty Backroads,The Elm Creek Band,country,melancholic,0.44,88,0.41,0.55,0.82,52,2010,"nostalgic,wistful,lonesome",0.10,0.22
+15,Shattered Glass,Iron Veil,metal,angry,0.97,168,0.27,0.52,0.04,63,2010,"aggressive,cathartic,intense",0.05,0.35
+16,Wildflower Ballad,June Hollow,folk,sad,0.29,68,0.37,0.38,0.93,44,2010,"wistful,melancholic,intimate",0.30,0.42
+17,Drop Zone,Pulse Syndicate,edm,euphoric,0.96,128,0.86,0.97,0.02,88,2020,"euphoric,electric,energetic",0.72,0.08
+18,Mississippi Burn,Low Delta,blues,melancholic,0.38,74,0.34,0.47,0.77,39,2000,"melancholic,raw,soulful",0.12,0.55
