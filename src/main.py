@@ -54,6 +54,48 @@ USER_PROFILES = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Adversarial / Edge-Case Profiles (Phase 4 stress test)
+#
+# These profiles are intentionally designed to expose weaknesses:
+#   1. conflicting_sad_high_energy — "sad" mood is not in the 18-song catalog;
+#      high energy contradicts the emotional intent. Tests cold-start for moods.
+#   2. unknown_genre_reggae — "reggae" is not in the catalog at all.
+#      Tests cold-start for genres; system must fall back to energy + acousticness.
+#   3. contradictory_metal_acoustic — metal songs have acousticness ≈ 0.04,
+#      but this user says likes_acoustic=True. Tests internal preference conflict.
+#   4. extreme_low_energy — energy target 0.05 (near silence) with a mood
+#      ("peaceful") not in the catalog. Tests the energy formula at extremes.
+# ---------------------------------------------------------------------------
+
+ADVERSARIAL_PROFILES = {
+    "conflicting_sad_high_energy": {
+        "genre": "rock",
+        "mood": "sad",        # "sad" is not a mood in the 18-song catalog
+        "energy": 0.9,        # high energy contradicts a sad mood intent
+        "likes_acoustic": False,
+    },
+    "unknown_genre_reggae": {
+        "genre": "reggae",    # not in catalog — pure cold-start scenario
+        "mood": "chill",
+        "energy": 0.55,
+        "likes_acoustic": True,
+    },
+    "contradictory_metal_acoustic": {
+        "genre": "metal",
+        "mood": "angry",
+        "energy": 0.97,
+        "likes_acoustic": True,  # Shattered Glass (only metal) has acousticness 0.04
+    },
+    "extreme_low_energy": {
+        "genre": "ambient",
+        "mood": "peaceful",   # "peaceful" is not in the catalog
+        "energy": 0.05,       # near-silence preference
+        "likes_acoustic": True,
+    },
+}
+
+
 def print_recommendations(label: str, user_prefs: dict, songs: list, k: int = 5) -> None:
     print(f"\n{'=' * 55}")
     print(f"  Profile: {label}")
@@ -74,7 +116,16 @@ def print_recommendations(label: str, user_prefs: dict, songs: list, k: int = 5)
 def main() -> None:
     songs = load_songs("data/songs.csv")
 
+    print("\n" + "#" * 55)
+    print("  STANDARD PROFILES")
+    print("#" * 55)
     for label, prefs in USER_PROFILES.items():
+        print_recommendations(label, prefs, songs, k=5)
+
+    print("\n" + "#" * 55)
+    print("  ADVERSARIAL / EDGE-CASE PROFILES")
+    print("#" * 55)
+    for label, prefs in ADVERSARIAL_PROFILES.items():
         print_recommendations(label, prefs, songs, k=5)
 
 
